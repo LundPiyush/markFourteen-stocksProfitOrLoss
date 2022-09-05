@@ -17,19 +17,21 @@ function clickHandler(){
 }
 
 function calculateProfitOrLoss(initial,quantity,current){
-    console.log(current,initial,quantity)
     if(current > initial){
         var profit = (current - initial)*quantity;
         var profitPercent = ((current-initial)/initial)*100
         message.innerText = `You have earned the profit of ${profit} and profit percentage is ${profitPercent.toFixed(2)}%`
+        document.body.style.backgroundColor ="#0FFF50";
     }
     else if(current < initial){
         var loss = initial-current
         var lossPercent = ((initial-current)/initial)*100
         message.innerText = `You have incured the loss of ${loss} and loss percentage is ${lossPercent.toFixed(2)}%`
+        document.body.style.backgroundColor ="#DC143C";
     }
     else{
         message.innerText = "No pain, No gain! No gain, No pain !!"
+        document.body.style.backgroundColor="#f1f5f9"
     }
 }
 
