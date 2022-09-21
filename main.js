@@ -24,7 +24,7 @@ function calculateProfitOrLoss(initial,quantity,current){
         document.body.style.backgroundColor ="#0FFF50";
     }
     else if(current < initial){
-        var loss = initial-current
+        var loss = (initial-current)*quantity;
         var lossPercent = ((initial-current)/initial)*100
         message.innerText = `You have incured the loss of ${loss} and loss percentage is ${lossPercent.toFixed(2)}%`
         document.body.style.backgroundColor ="#DC143C";
