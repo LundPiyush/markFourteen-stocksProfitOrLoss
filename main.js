@@ -8,7 +8,7 @@ function clickHandler(){
     if(inputCurrentPrice.value === '' || inputInitialPrice.value === '' || inputQuantity.value ===''){
         message.innerText = "Please enter all the fields"
     }
-    else if(Number(inputInitialPrice)<=0 || Number(inputQuantity)<=0 || Number(inputCurrentPrice)<=0){
+    else if(Number(inputInitialPrice.value)<=0 || Number(inputQuantity.value)<=0 || Number(inputCurrentPrice.value)<=0){
         message.innerText = "All feilds should be atleast greater than zero";
     }
     else{
